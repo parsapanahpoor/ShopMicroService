@@ -55,8 +55,6 @@ builder.Services.AddApiVersioning(Options =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "ShopMicroService.xml"), true);
-
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopMicroService", Version = "v1" });
     c.SwaggerDoc("v2", new OpenApiInfo { Title = "ShopMicroService", Version = "v2" });
 
