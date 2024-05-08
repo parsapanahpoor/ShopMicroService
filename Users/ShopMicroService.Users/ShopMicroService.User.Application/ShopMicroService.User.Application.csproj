@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.9.0" />
+		<PackageReference Include="HtmlSanitizer" Version="8.0.865" />
+		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.4" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ShopMicroService.User.Domain\ShopMicroService.User.Domain.csproj" />
+	</ItemGroup>
+	
 </Project>
