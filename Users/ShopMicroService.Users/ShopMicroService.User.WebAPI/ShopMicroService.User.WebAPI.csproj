@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" NoWarn="NU1605" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.4" NoWarn="NU1605" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ShopMicroService.User.Application\ShopMicroService.User.Application.csproj" />
+		<ProjectReference Include="..\ShopMicroService.User.Infrastructure\ShopMicroService.User.Infrastructure.csproj" />
+		<ProjectReference Include="..\ShopMicroService.User.IoC\ShopMicroService.User.IoC.csproj" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
